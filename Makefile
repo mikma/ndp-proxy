@@ -15,5 +15,3 @@ $(DESTDIR)/usr/sbin/ndp-proxy: ndp-proxy
 	install -o root -g root -m 744 ndp-proxy $(DESTDIR)/usr/sbin/ndp-proxy
 
 ndp-proxy: ndp-proxy.c
-	gcc ndp-proxy.c -o ndp-proxy
-
