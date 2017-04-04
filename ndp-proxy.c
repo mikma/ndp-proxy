@@ -471,7 +471,7 @@ void handle_signal(int signal)
 	if (verbose)
 		fprintf(stderr, "Signal %d received. Exiting.\n", signal);
 
-	if (unlink(pidfile) < 0) 
+	if (daemon_mode && unlink(pidfile) < 0)
 		err(1, "unlink");
 
 	exit(0);
