@@ -59,7 +59,7 @@ case "$1" in
         status $DAEMON_PROCESS
         RETVAL=$?
         ;;
-    restart)
+    restart|force-reload)
         stop
         start
         ;;
@@ -70,7 +70,7 @@ case "$1" in
         fi
         ;;
     *)
-        echo "Usage: $0 {start|stop|restart|condrestart|status}"
+        echo "Usage: $0 {start|stop|restart|force-reload|condrestart|status}"
         RETVAL=1
 esac
 
